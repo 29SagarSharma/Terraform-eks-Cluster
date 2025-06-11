@@ -22,18 +22,4 @@ output "kubeconfig_command" {
   value = module.eks.kubeconfig_command
 }
 
-output "node_asg_name" {
-  value = module.nodes.asg_name
-}
-
-output "bastion_public_ip" {
-  value       = var.enable_bastion ? module.bastion.public_ip : null
-  description = "Public IP of bastion host"
-}
-
-output "bastion_ssh_command" {
-  value       = var.enable_bastion ? module.bastion.ssh_command : null
-  description = "SSH command for bastion host"
-}
-
 
